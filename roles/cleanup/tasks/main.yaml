@@ -1,0 +1,11 @@
+---
+- name: stop-docker-compose
+  docker_compose: project_src=/root/project state=absent
+ 
+- name: remove-docker-container
+  docker_image: name=fauria/lamp state=absent
+
+- name: remove-project-directory
+  file: state=absent path={{item}}
+  with_items:
+  - /root/project/

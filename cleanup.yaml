@@ -1,0 +1,5 @@
+---
+- hosts: testservers
+  become_user: root
+  roles:
+  - cleanup

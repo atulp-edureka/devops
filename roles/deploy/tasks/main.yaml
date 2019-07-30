@@ -1,0 +1,10 @@
+---
+- name: git-clone-repo
+  git: repo={{item}} dest=/root/project
+  with_items:
+  - https://github.com/atulp-edureka/website.git
+
+- name: setup-docker-image
+  docker_compose: project_src=/root/project state=present
+
+
