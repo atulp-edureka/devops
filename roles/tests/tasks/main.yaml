@@ -1,0 +1,10 @@
+---
+  - name: Copy Test scripts from devops to server
+    copy:
+      src: devops/checksiteisup.py
+      dest: /root/project/checksiteisup.py
+      mode: '0755'
+  - name: Execute Tests Script
+    command: python checksiteisup.py
+    args:
+      chdir: /root/project/
