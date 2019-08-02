@@ -1,5 +1,5 @@
 ---
-  - name: Copy Test scripts from devops to server
+  - name: Copy Test scripts from Devops to server
     copy:
       src: devops/checksiteisup.py
       dest: /root/project/checksiteisup.py
